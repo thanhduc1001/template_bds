@@ -1,0 +1,19 @@
+.cssbody{
+    background: url('../images/affcup/bg_center.png') no-repeat;
+    background-color: #00254e;
+/*    background-image: linear-gradient(to bottom,#001935,#00254e); */
+}
+.bgtop{
+    background-image: linear-gradient(to bottom,#001935,#001935);
+}
+.footeraff{
+    background: #039ED7;
+    
+}
+.menu_cat_title2{
+    font-size: 24px;line-height:0.71;color:#ffffff;font-family:"Merriweather Sans Bold"
+}
+
+.bxhaff{
+    background: #ffffff;
+}

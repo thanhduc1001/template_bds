@@ -1,0 +1,343 @@
+.home{
+  &__conTent{
+    padding-top: 13px;
+    @include media-breakpoint-up('m'){
+      padding-top: 30px;
+    }
+    @include media-breakpoint-up('l'){
+      padding-top: 40px;
+      padding-bottom: 222px;
+    }
+  }
+  &__margin{
+    &:nth-child(n+2){
+      margin-top: 30px;
+      @include media-breakpoint-up('m'){
+        margin-top: 40px;
+      }
+    }
+  }
+  &__margin1{
+    margin-bottom: 10px;
+    @include media-breakpoint-up('m'){
+      margin-bottom: 20px;
+    }
+  }
+  &__bannerTop{}
+  &__box1{
+    //border-radius: 4px;
+    @include media-breakpoint-up('m'){
+      //border-radius: 8px;
+    }
+    overflow: hidden;
+    &__content{
+      @include media-breakpoint-up('m'){
+        padding: 20px;
+      }
+      top: calc((304/513)*100%);
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(35, 31, 32, 0.5) 38%, #231f20);
+      &__title{
+        @extend .fz-28;
+        line-height: (30/28);
+        font-family: $font-MerriweatherSans-Bold;
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__box2{
+    &__item{
+      &:nth-child(n+2){
+        $x: 13px;
+        margin-top: #{$x};
+        padding-top: #{$x};
+        border-top: 1px solid #bbbbbb;
+      }
+    }
+    &__box{
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: #fff;
+      @include media-breakpoint-up('m'){
+        border-radius: 8px;
+      }
+    }
+    &__img{
+      border-radius: 4px;
+      @include media-breakpoint-up('m'){
+        border-radius: 8px;
+      }
+    }
+    &__title{
+      @extend .line-clamp-3;
+      @extend .fz-18;
+      line-height: (24/18);
+      font-family: $font-MerriweatherSans-Bold;
+      a{
+        color: #231f20;
+      }
+    }
+  }
+  &__box3{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    overflow: hidden;
+    @include media-breakpoint-up('m'){
+      border-radius: 8px;
+    }
+    &__box{
+      @include media-breakpoint-up('m'){
+        padding: 20px;
+      }
+      >*{
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        &:nth-child(n+2){
+          margin-top: 10px !important;
+          @include media-breakpoint-up('m'){
+            margin-top: 15px !important;
+          }
+        }
+      }
+    }
+    &__title{
+      line-height: 1.5;
+      font-family: $font-MerriweatherSans-Bold;
+      @extend .fz-24;
+      a{
+        color: #231f20;
+      }
+    }
+    &__label{
+      line-height: 2.2;
+      border-radius: 3px;
+      @extend .fz-14;
+      font-family: $font-MerriweatherSans-Regular;
+      text-transform: capitalize;
+      background-image: linear-gradient(to bottom, #f27023, #f65f07);
+    }
+    &__time{
+      @extend .home__box3__desc;
+      color: #bbbbbb !important;
+    }
+    &__desc{
+      line-height: 1.29;
+      @include media-breakpoint-up('m'){
+
+      }
+      @extend .fz-14;
+      color: #231f20;
+      font-family: $font-MerriweatherSans-Regular;
+    }
+  }
+  &__box4{
+    &__img{
+      height: 25px;
+      @include media-breakpoint-up('m'){
+        height: 30px;
+      }
+    }
+    &__title{
+      line-height: 0.71;
+      color: #231f20;
+      @extend .fz-28;
+      font-family: $font-MerriweatherSans-BoldItalic;
+    }
+  }
+  &__aside{
+    &__card{
+      border-radius: 8px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      &--dark{
+        background-image: linear-gradient(to bottom, #504f4f, #101010);
+      }
+      $x: 10px;
+      &__dc{
+        padding-left: #{$x};
+        padding-right: #{$x};
+      }
+      &__header{
+        @extend .home__aside__card__dc;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        &__title{
+          font-family: $font-MerriweatherSans-Bold;
+          text-transform: uppercase;
+          color: #231f20;
+          .home__aside__card--dark &{
+            color: #ffffff;
+          }
+          line-height: 1.36;
+          @extend .fz-22;
+        }
+        &__form{
+          &__btn{
+            padding: 0 30px;
+            padding-left: 15px;
+            border-radius: 8px;
+            background-color: #eeeeee;
+            color: #231f20;
+            text-transform: inherit;
+            position: relative;
+            >span{
+              &:first-child{
+                line-height: 1.28;
+                @extend .fz-18;
+                font-family: $font-MerriweatherSans-Bold;
+              }
+            }
+            .uk-icon{
+              right: 5px;
+            }
+          }
+        }
+        &__linkCalendar{
+          color: #ffffff;
+        }
+      }
+      &__table{
+        thead{
+          tr{
+            th{
+              &:not(:nth-child(2),:first-child){
+                text-align: center;
+              }
+              background-color: #504f4f;
+              line-height: 1.29;
+              color: #ffffff;
+              @extend .fz-14;
+              font-family: $font-MerriweatherSans-Bold;
+              text-transform: inherit;
+              &:last-child{
+                padding-left: 0;
+                padding-right: 0;
+              }
+            }
+          }
+        }
+        tbody{
+          tr{
+            td{
+              &:not(:nth-child(2),:first-child){
+                text-align: center;
+              }
+              &:not(:nth-child(2)){
+                letter-spacing: 0.6px;
+                @extend .fz-12;
+                font-family: $font-MerriweatherSans-Regular;
+              }
+              padding-top: 0;
+              padding-bottom: 0;
+              &:last-child{
+                padding: 0;
+              }
+            }
+          }
+        }
+        &__tr{
+          &__txt1{
+            color: #3e4237;
+            .home__aside__card__table__tr:hover &{
+              color: #ffffff;
+            }
+          }
+          &__txt2{
+            @extend .fz-13;
+            letter-spacing: 0.65px;
+            color: #3e4237;
+            font-family: $font-MerriweatherSans-Regular;
+            text-transform: uppercase;
+            .home__aside__card__table__tr:hover &{
+              color: #ffffff;
+            }
+          }
+          &__box1{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 47.1px;
+            height: 42px;
+            border-radius: 4px;
+            background-color: #fafaf8;
+            .home__aside__card__table__tr:hover &{
+              background-color: transparent;
+            }
+          }
+          &:hover{
+            background-color: #f27023;
+            color: #ffffff !important;
+          }
+        }
+      }
+      &__body{
+        @extend .home__aside__card__dc;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        &__box1{
+          border-radius: 4px;
+          box-shadow: 0 1px 8px 0 rgba(110, 110, 110, 0.1);
+          background-color: #6b6a6a;
+          padding: 7px 10px;
+          color: #ffffff;
+          margin-bottom: 5px;
+          &__txt{
+            line-height: 2.25;
+            letter-spacing: 0.2px;
+            color: #ffffff;
+            @extend .fz-16;
+            font-family: $font-MerriweatherSans-Regular;
+          }
+          &__dot{
+            $x: 5px;
+            width: #{$x};
+            height: #{$x};
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: -3px;
+          }
+        }
+        &__box2{
+          a{
+            line-height: 1.29;
+            color: #ffffff;
+            @extend .fz-14;
+            font-family: $font-MerriweatherSans-Regular;
+          }
+        }
+        &__box3{
+          border-radius: 4px;
+          box-shadow: 0 1px 8px 0 rgba(110, 110, 110, 0.1);
+          background-color: #ffffff;
+          //min-height: 200px;
+          &__item{
+            padding: 15px 20px;
+            //padding-left: 28px;
+            &:nth-child(n+2){
+              border-top: 1px solid #707070;
+            }
+            &__txt{
+              line-height: 1.29;
+              color: #231f20;
+              @extend .fz-24;
+              font-family: $font-MerriweatherSans-Regular;
+            }
+            &__margin{
+              margin-top: 0px !important;
+            }
+            &__date{
+              margin-bottom: 16px;
+              line-height: 1.82;
+              color: #6b6a6a;
+              font-family: $font-MerriweatherSans-Regular;
+              @extend .fz-17;
+            }
+          }
+        }
+      }
+    }
+  }
+}

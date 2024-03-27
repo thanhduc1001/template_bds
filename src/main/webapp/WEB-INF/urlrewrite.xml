@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>  
+    <rule>
+        <from>index.html</from>
+        <to>index.jsp</to>
+    </rule>    
+    <rule>
+        <from>config.properties</from>
+        <to>error.jsp</to>
+    </rule>              
+    <rule>
+        <from>tin-da-luu.html</from>
+        <to>view/view_user_save.jsp</to>
+    </rule> 
+    <rule>
+        <from>thong-tin-ca-nhan.html</from>
+        <to>view/view_user.jsp?cat=user</to>
+    </rule>
+    <rule>
+        <from>^/goi-cuoc-p-([-a-z0-9_]+)\.html</from>
+        <to>view/view_package.jsp?rpack=$1</to>
+    </rule>
+   <rule>
+        <from>goi-cuoc.html</from>
+        <to>view/view_package.jsp?rpack=$1</to>
+    </rule>
+    <rule>
+        <from>chinh-sach-bao-ve.html</from>
+        <to>view/view_policy.jsp</to>
+    </rule>
+    <rule>
+        <from>logout.html</from>
+        <to>view/logout.jsp</to>
+    </rule>
+    <rule>
+        <from>login.html</from>
+        <to>view/login.jsp</to>
+    </rule>
+         
+    <!-- page-->
+    <rule>
+        <from>^/p-([-a-z0-9_]+)-([0-9]+)\.html</from>
+        <to>view/view_page.jsp?pageCode=$1&amp;pageId=$2</to>
+    </rule>
+    <!-- page-->        
+    <!-- page-->
+    <rule>
+        <from>gioi-thieu.html</from>
+        <to>view/view_page_gt.jsp?cat=gt</to>
+    </rule>
+    <rule>
+        <from>dieu-khoan-thanh-toan.html</from>
+        <to>view/view_page_dktt.jsp?cat=dktt</to>
+    </rule>
+    <rule>
+        <from>bao-mat-thong-tin.html</from>
+        <to>view/view_page_bmtt.jsp?cat=bmtt</to>
+    </rule>
+    <!-- page-->
+ 
+       
+    <!--phân trang-->
+    <rule>
+        <from>^/view-([-a-z0-9]+)-p([0-9]+)\.html</from>
+        <to>view/view_cat.jsp?cat=$1&amp;page=$2&amp;cat=view</to>
+    </rule>
+    <!--phân trang-->
+    <rule>
+        <from>^/view-([-a-z0-9_]+)\.html</from>
+        <to>view/view_cat.jsp?cat=$1</to>
+    </rule>   
+      
+    <rule>
+        <from>^/.*-v([0-9]+)\.html</from>
+        <to>view/view_detail.jsp?id=$1&amp;type=video</to>
+    </rule>      
+   
+    <rule>
+        <from>^/.*-n([0-9]+)\.html</from>
+        <to>view/view_detail.jsp?id=$1&amp;type=new</to>
+    </rule>
+   
+    
+    
+    <!-- tin tuc-->
+   
+    <!--     goi cuoc -->
+    <rule>
+        <from>^/package-([-a-z0-9]+)\.html</from>
+        <to>view/view_package.jsp?cid=$1&amp;cat=pack</to>
+    </rule>  
+    
+    
+    <rule>
+        <from>^/([-a-z0-9]+)\.html</from>
+        <to>view/view_page.jsp?cid=$1</to>
+    </rule>  
+        
+  
+         
+    
+</urlrewrite>
+
